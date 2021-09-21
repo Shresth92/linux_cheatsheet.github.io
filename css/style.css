@@ -1,0 +1,13 @@
+.container{
+    width: 50vw;
+    padding: 32px 0px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+
+}
+
+.container img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

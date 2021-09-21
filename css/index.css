@@ -1,0 +1,14 @@
+.extra{
+    background-image: url('https://www.zdnet.com/a/img/resize/ab28c9a5467cb4e0fdb541d12af2688b9071a0ba/2014/10/02/c976f097-49e6-11e4-b6a0-d4ae52e95e57/big-step-forward-in-business-linux-red-hat-enterprise-linux-7-arrives-v2.jpg?width=770&fit=bounds&auto=webp'); 
+    height: 92vh; 
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
+    padding-top: 37vh;
+    color: aliceblue;
+} 
+
+.extra button a{
+    color: aliceblue;
+    text-decoration: none;
+}

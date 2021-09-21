@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/prism.css">
+    <script src="../js/prism.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <title>Date CheatSheet</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Linux CheatSheet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/commands.html">Commands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-4">
+        <h1>date command in Linux</h1>
+        <p>date command is used to display the system date and time. date command is also used to set date and time of
+            the system. By default the date command displays the date in the time zone on which unix/linux operating
+            system is configured.You must be the super-user (root) to change the date and time.</p>
+        <h4>Syntax: </h4>
+        <pre class="command-line" data-user="root" data-host="localhost" data-output="2, 4-8"><code class="language-bash">date
+day month date time format year</code></pre><br>
+        <h2>Other Functions of date</h2>
+
+        <p><strong>1: date :</strong>With no options, the date command displays the current date and time, including the abbreviated day name, abbreviated month name, day of the month, the time separated by colons, the time zone name, and the year. </p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">date</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash">Sun Sep 19 22:55:01 IST 2021</code></pre>
+
+        <p><strong>2: date -u :</strong>Displays the time in GMT(Greenwich Mean Time)/UTC(Coordinated Universal Time )time zone.  </p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">date -u</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash">Sun Sep 19 06:11:31 UTC 2021</code></pre>
+
+        <p><strong>3: date %D :</strong>Display date as mm/dd/yy.  </p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">date "+%D"</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash">9/19/2021</code></pre>
+
+        <p><strong>4: date %d: :</strong>Display the day of the month (01 to 31). </p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">date "+%d"</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash">09</code></pre>
+
+        <p>Below is a small list of the some of the most common formatting characters.</p>
+        <ul>
+            <li>%a - Locale’s abbreviated short weekday name (e.g., Mon)</li>
+            <li>%A - Locale’s abbreviated full weekday name (e.g., Monday)</li>
+            <li>%b - Locale’s abbreviated short month name (e.g., Jan)</li>
+            <li>%B - Locale’s abbreviated long month name (e.g., January)</li>
+            <li>%d - Day of month (e.g., 01)</li>
+            <li>%H - Hour (00..23)</li>
+            <li>%I - Hour (01..12)</li>
+            <li>%j - Day of year (001..366)</li>
+            <li>%m - Month (01..12)</li>
+            <li>%M - Minute (00..59)</li>
+            <li>%S - Second (00..60)</li>
+            <li>%u - Day of week (1..7)</li>
+            <li>%Y - Full year (e.g., 2019)</li>
+        </ul>
+
+        <p><strong>5: date %a: :</strong>Displays the abbreviated name for weekdays (Sun to Sat). </p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">date "+%a"</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash">Sun</code></pre>
+
+        <p><strong>6: date %A: :</strong>Displays full weekdays (Sunday to Saturday). </p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">date "+%A"</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash">Sunday</code></pre>
+
+        <p><strong>7: date %h or date %b: :</strong>Displays abbreviated month name (Jan to Dec).</p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">date "+%h"</code></pre>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">date "+%b"</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash">Sep</code></pre>
+
+        <p><strong>8: date %B: :</strong>Displays full month name(January to December).</p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">date "+%B"</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash">September</code></pre>
+
+        <p><strong>9: date %m: :</strong>Displays the month of year (01 to 12).</p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">date "+%m"</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash">09</code></pre>
+
+        <p><strong>10: date %y: :</strong>Displays last two digits of the year(00 to 99).</p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">date "+%y"</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash">21</code></pre>
+
+        <p><strong>11: date %Y: :</strong>Display four-digit year.</p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">date "+%Y"</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash">2021</code></pre>
+
+        
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

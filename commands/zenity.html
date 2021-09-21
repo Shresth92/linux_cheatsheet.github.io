@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/prism.css">
+    <script src="../js/prism.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <title>Zenity CheatSheet</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Linux CheatSheet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/commands.html">Commands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-4">
+        <h1>zenity command in Linux</h1>
+        <p>zenity is a program that will display GTK+ dialogs, and return (either in the return code, or on standard
+            output) the users input. This allows you to present information, and ask for information from the user, from
+            all manner of shell scripts.</p>
+        <p>For example, <strong>zenity --question</strong> will return either 0, 1 or 5, depending on whether the user
+            pressed OK, Cancel or timeout has been reached. zenity --entry will output on standard output what the user
+            typed into the text entry field.</p>
+        <h4>Syntax: </h4>
+        <pre class="command-line" data-user="root"
+            data-host="localhost"><code class="language-bash">zenity [OPTIONS]</code></pre><br>
+
+        <p><strong>zenity --help :</strong>To check all zenity commands. </p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root"
+            data-host="localhost"><code class="language-bash">zenity --help</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash">Usage:
+zenity [OPTION…]
+          
+Help Options:
+    -h, --help                                        Show help options
+    --help-all                                        Show all help options
+    --help-general                                    Show general options
+    --help-calendar                                   Show calendar options
+    --help-entry                                      Show text entry options
+    --help-error                                      Show error options
+    --help-info                                       Show info options
+    --help-file-selection                             Show file selection options
+    --help-list                                       Show list options
+    --help-notification                               Show notification icon options
+    --help-progress                                   Show progress options
+    --help-question                                   Show question options
+    --help-warning                                    Show warning options
+    --help-scale                                      Show scale options
+    --help-text-info                                  Show text information options
+    --help-color-selection                            Show color selection options
+    --help-password                                   Show password dialog options
+    --help-forms                                      Show forms dialog options
+    --help-misc                                       Show miscellaneous options
+    --help-gtk                                        Show GTK+ Options
+          
+Application Options:
+    --calendar                                        Display calendar dialog
+    --entry                                           Display text entry dialog
+    --error                                           Display error dialog
+    --info                                            Display info dialog
+    --file-selection                                  Display file selection dialog
+    --list                                            Display list dialog
+    --notification                                    Display notification
+    --progress                                        Display progress indication dialog
+    --question                                        Display question dialog
+    --warning                                         Display warning dialog
+    --scale                                           Display scale dialog
+    --text-info                                       Display text information dialog
+    --color-selection                                 Display color selection dialog
+    --password                                        Display password dialog
+    --forms                                           Display forms dialog
+    --display=DISPLAY                                 X display to use</code></pre>
+
+        
+
+        <br><h2>The available widgets</h2>
+
+        <p><strong>1: zenity --calendar :</strong>The calendar widget will display a calendar and let the user pick a date, by selecting the month, day and year. The selected values will be returned on the standard output. To launch the widget calendar, all we have to is to invoke zenity, with the --calendar option: </p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">zenity --calendar</code></pre>
+        <h4>Output :</h4>
+        <img src="../img/zenity/calendar.png" alt="calender">
+
+        <p><strong>2: entry :</strong>The entry widget is really useful when we need to ask the user for some text. Say
+            for example we need to ask the user to enter its name; we can run the following command: </p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root"
+            data-host="localhost"><code class="language-bash">zenity --entry --title "Name request" --text "Please enter your name:"</code></pre>
+        <h4>Output :</h4>
+        <img src="../img/zenity/entry.png" alt="entry">
+
+        <p><strong>3: Info, warning and error widgets :</strong>To display info, warning or error messages, we can use
+            zenity with the --info, --warning and --error options, respectively. In this case we use the --text option
+            to specify the message.</p><br>
+        <h5>A. Info</h5>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root"
+            data-host="localhost"><code class="language-bash">zenity --info --text "Hello I am xyz"</code></pre>
+        <h4>Output :</h4>
+        <img src="../img/zenity/info.png" alt="info"><br>
+        <h5>B. Warning</h5>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root"
+            data-host="localhost"><code class="language-bash">zenity --warning --text "warning"</code></pre>
+        <h4>Output :</h4>
+        <img src="../img/zenity/warning.png" alt="warning"><br>
+        <h5>c. Error</h5>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root"
+            data-host="localhost"><code class="language-bash">zenity --error --text "Error"</code></pre>
+        <h4>Output :</h4>
+        <img src="../img/zenity/error.png" alt="error"><br>
+        <p><strong>4: The question widget :</strong>To ask the user a question and get its answer we can use the
+            question widget, invoking zenity with the --question option. We specify the question using the --text
+            option, and define the labels of the ‘ok’ and ‘cancel’ buttons, using respectively the --ok-label and
+            --cancel-label options.</p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root"
+            data-host="localhost"><code class="language-bash">zenity --question --title="Maxwell" --text "Maxwell has four equations"</code></pre>
+        <h4>Output :</h4>
+        <img src="../img/zenity/question.png" alt="question"><br>
+
+        <p><strong>5: The password widget:</strong>This is the widget we should use when we want the user to enter a
+            password or any sensitive information: the text he enters is masked by bullets:</p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root"
+            data-host="localhost"><code class="language-bash">zenity --password</code></pre>
+        <h4>Output :</h4>
+        <img src="../img/zenity/password.png" alt="password"><br>
+
+        <p><strong>5: File Selection:</strong>This is the widget we should use when we want the user to select a file from system</p>
+        <h4>Syntax :</h4>
+        <pre class="command-line" data-user="root"
+            data-host="localhost"><code class="language-bash">zenity --file-selection</code></pre>
+        <h4>Output :</h4>
+        <img src="../img/zenity/file.png" alt="file selection"><br>
+
+        <h4>To check more zenity command type this command on your terminal</h4>
+        <pre class="command-line" data-user="root"
+            data-host="localhost"><code class="language-bash">man zenity</code></pre>
+        <h2>Thank You for Reading</h2>
+
+  
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
