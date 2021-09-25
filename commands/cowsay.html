@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/prism.css">
+    <script src="../js/prism.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <title>Cowsay CheatSheet</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/linux_cheatsheet.github.io/">Linux CheatSheet</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/linux_cheatsheet.github.io/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/linux_cheatsheet.github.io/commands.html">Commands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/linux_cheatsheet.github.io/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-4">
+        <h1>cowsay command in Linux</h1>
+        <p> cowsay/cowthink - configurable speaking/thinking cow (and a bit more)</p>
+        <p> Cowsay  generates  an  ASCII picture of a cow saying something provided by the user.  If run with no arguments, it accepts standard input, word-wraps the message given at about 40 columns, and prints the cow saying the given
+            message on standard output.</p>
+        <p> To aid in the use of arbitrary messages with arbitrary whitespace, use the -n option.  If it is specified, the given message will not be word-wrapped.  This is possibly useful if you want to make the cow think  or  speak  in
+            figlet(6).  If -n is specified, there must not be any command-line arguments left after all the switches have been processed.</p>
+        <p>The -W specifies roughly (where the message should be wrapped.  The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.</p>
+
+        <p>If any command-line arguments are left over after all switches have been processed, they become the cow's message.  The program will not accept standard input for a message in this case.</p>
+        <p> There  are  several provided modes which change the appearance of the cow depending on its particular emotional/physical state.  The -b option initiates Borg mode; -d causes the cow to appear dead; -g invokes greedy mode; -p causes a state of paranoia to come over the cow; -s makes the cow appear thoroughly stoned; -t yields a tired cow; -w is somewhat the opposite of -t, and initiates wired mode; -y brings on the cow's youthful appearance.</p>
+        <p>The user may specify the -e option to select the appearance of the cow's eyes, in which case the first two characters of the argument string eye_string will be used.  The default eyes are 'oo'.  The tongue is similarly  configurable  through  -T  and  tongue_string; it must be two characters and does not appear by default.  However, it does appear in the 'dead' and 'stoned' modes.  Any configuration done by -e and -T will be lost if one of theprovided modes is used.</p>
+        <p>The -f option specifies a particular cow picture file (``cowfile'') to use.  If the cowfile spec contains '/' then it will be interpreted as a path relative to the current directory.  Otherwise, cowsay will search  the  path specified in the COWPATH environment variable.  To list all cowfiles on the current COWPATH, invoke cowsay with the -l switch.</p>
+
+        <pre class="command-line" data-user="root" data-host="localhost"><code class="language-bash">cowsay "Hello my name is xyz"</code></pre>
+        <h4>Output :</h4>
+        <pre><code class="language-bash"> ___________________
+&lt; Hi my name is xyz &gt;
+ -------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||</code></pre>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
